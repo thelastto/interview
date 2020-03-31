@@ -1,0 +1,871 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>数据类型 · 面试集</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Gioia Xu">
+        
+        
+    
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="closure.html" />
+    
+    
+    <link rel="prev" href="this.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../algorithm/">
+            
+                <a href="../algorithm/">
+            
+                    
+                    算法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../algorithm/full_permutate.html">
+            
+                <a href="../algorithm/full_permutate.html">
+            
+                    
+                    全排列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JS 基础
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="bind.html">
+            
+                <a href="bind.html">
+            
+                    
+                    ？bind
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="this.html">
+            
+                <a href="this.html">
+            
+                    
+                    this 指向
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="type.html">
+            
+                <a href="type.html">
+            
+                    
+                    数据类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="closure.html">
+            
+                <a href="closure.html">
+            
+                    
+                    闭包有什么用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="load.html">
+            
+                <a href="load.html">
+            
+                    
+                    ？加载
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="event.html">
+            
+                <a href="event.html">
+            
+                    
+                    事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="cross_domain.html">
+            
+                <a href="cross_domain.html">
+            
+                    
+                    跨域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="BOM.html">
+            
+                <a href="BOM.html">
+            
+                    
+                    ？BOM
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="gc.html">
+            
+                <a href="gc.html">
+            
+                    
+                    垃圾回收机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="eval.html">
+            
+                <a href="eval.html">
+            
+                    
+                    eval是做什么的
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.11" data-path="watch.html">
+            
+                <a href="watch.html">
+            
+                    
+                    监听对象属性的改变
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.12" data-path="private_property.html">
+            
+                <a href="private_property.html">
+            
+                    
+                    实现一个私有变量
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13" data-path="operator.html">
+            
+                <a href="operator.html">
+            
+                    
+                    操作符
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.14" data-path="image.html">
+            
+                <a href="image.html">
+            
+                    
+                    js怎么控制一次加载一张图片，加载完后再加载下一张
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.15" data-path="prototype.html">
+            
+                <a href="prototype.html">
+            
+                    
+                    Function.proto === ?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.16" data-path="array.html">
+            
+                <a href="array.html">
+            
+                    
+                    数组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../js-skill/">
+            
+                <a href="../js-skill/">
+            
+                    
+                    高级技巧
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../js-skill/throttle_and_debounce.html">
+            
+                <a href="../js-skill/throttle_and_debounce.html">
+            
+                    
+                    节流和防抖
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../js-skill/deep_copy.html">
+            
+                <a href="../js-skill/deep_copy.html">
+            
+                    
+                    深拷贝
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../js-skill/drag.html">
+            
+                <a href="../js-skill/drag.html">
+            
+                    
+                    拖放
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../js-skill/once.html">
+            
+                <a href="../js-skill/once.html">
+            
+                    
+                    once
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../js-skill/promise.html">
+            
+                <a href="../js-skill/promise.html">
+            
+                    
+                    promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../js-skill/ajax_to_promise.html">
+            
+                <a href="../js-skill/ajax_to_promise.html">
+            
+                    
+                    将 ajax 封装成 promise
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../js-skill/sleep.html">
+            
+                <a href="../js-skill/sleep.html">
+            
+                    
+                    sleep
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../browser/">
+            
+                <a href="../browser/">
+            
+                    
+                    浏览器
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../browser/cache.html">
+            
+                <a href="../browser/cache.html">
+            
+                    
+                    缓存
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../browser/render.html">
+            
+                <a href="../browser/render.html">
+            
+                    
+                    浏览器渲染原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../advanced/">
+            
+                <a href="../advanced/">
+            
+                    
+                    前端进阶
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../advanced/modules.html">
+            
+                <a href="../advanced/modules.html">
+            
+                    
+                    模块化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../advanced/events.html">
+            
+                <a href="../advanced/events.html">
+            
+                    
+                    简单实现Node的Events模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../advanced/performance.html">
+            
+                <a href="../advanced/performance.html">
+            
+                    
+                    性能优化
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../css.html">
+            
+                <a href="../css.html">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >数据类型</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x6570;&#x636E;&#x7C7B;&#x578B;</h1>
+<!-- toc -->
+<ul>
+<li><a href="#%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</a><ul>
+<li><a href="#symbol">symbol</a></li>
+</ul>
+</li>
+<li><a href="#%E5%A6%82%E4%BD%95%E5%88%A4%E6%96%AD%E7%B1%BB%E5%9E%8B">&#x5982;&#x4F55;&#x5224;&#x65AD;&#x7C7B;&#x578B;</a></li>
+<li><a href="#%E5%88%A4%E6%96%AD%E6%98%AF%E5%90%A6%E6%98%AF%E6%95%B0%E7%BB%84">&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6570;&#x7EC4;</a></li>
+</ul>
+<!-- tocstop -->
+<h2 id="&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;">&#x57FA;&#x672C;&#x6570;&#x636E;&#x7C7B;&#x578B;</h2>
+<p>Undefined&#x3001;Null&#x3001;Boolean&#x3001;Number &#x3001;String&#x3001;Symbol</p>
+<h3 id="symbol">symbol</h3>
+<ul>
+<li><p>&#x8BED;&#x6CD5;&#xFF1A;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &#x4E0D;&#x80FD;&#x7528; new</span>
+<span class="hljs-keyword">let</span> s = <span class="hljs-built_in">Symbol</span>()
+
+<span class="hljs-comment">// &#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#xFF0C;&#x8868;&#x793A;&#x5BF9; Symbol &#x5B9E;&#x4F8B;&#x7684;&#x63CF;&#x8FF0;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x4E3A;&#x4E86;&#x5728;&#x63A7;&#x5236;&#x53F0;&#x663E;&#x793A;&#xFF0C;&#x6216;&#x8005;&#x8F6C;&#x4E3A;&#x5B57;&#x7B26;&#x4E32;&#x65F6;&#xFF0C;&#x6BD4;&#x8F83;&#x5BB9;&#x6613;&#x533A;&#x5206;&#x3002;</span>
+<span class="hljs-keyword">let</span> s1 = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;foo&apos;</span>);
+<span class="hljs-keyword">let</span> s2 = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;bar&apos;</span>);
+
+s1 <span class="hljs-comment">// Symbol(foo)</span>
+s2 <span class="hljs-comment">// Symbol(bar)</span>
+
+s1.toString() <span class="hljs-comment">// &quot;Symbol(foo)&quot;</span>
+s2.toString() <span class="hljs-comment">// &quot;Symbol(bar)&quot;</span>
+</code></pre>
+</li>
+<li><p>&#x4F5C;&#x7528;&#xFF1A;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x72EC;&#x4E00;&#x65E0;&#x4E8C;&#x7684;&#x503C;</p>
+<ul>
+<li><p>&#x7528;&#x4F5C;&#x5BF9;&#x8C61;&#x7684;&#x5C5E;&#x6027;&#x540D;</p>
+<ul>
+<li>&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x5728;<code>for...in</code>&#x3001;<code>for...of</code>&#x5FAA;&#x73AF;&#x4E2D;&#xFF0C;&#x4E5F;&#x4E0D;&#x4F1A;&#x88AB;<code>Object.keys()</code>&#x3001;<code>Object.getOwnPropertyNames()</code>&#x3001;<code>JSON.stringify()</code>&#x8FD4;&#x56DE;&#x3002;</li>
+<li><code>Object.getOwnPropertySymbols()</code>&#x65B9;&#x6CD5;&#xFF0C;&#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709; Symbol &#x5C5E;&#x6027;&#x540D;&#x3002;&#x8BE5;&#x65B9;&#x6CD5;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x6210;&#x5458;&#x662F;&#x5F53;&#x524D;&#x5BF9;&#x8C61;&#x7684;&#x6240;&#x6709;&#x7528;&#x4F5C;&#x5C5E;&#x6027;&#x540D;&#x7684; Symbol &#x503C;&#x3002;</li>
+<li><code>Reflect.ownKeys()</code>&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x8FD4;&#x56DE;&#x6240;&#x6709;&#x7C7B;&#x578B;&#x7684;&#x952E;&#x540D;&#xFF0C;&#x5305;&#x62EC;&#x5E38;&#x89C4;&#x952E;&#x540D;&#x548C; Symbol &#x952E;&#x540D;&#x3002;</li>
+</ul>
+</li>
+<li><p>&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x4E00;&#x7EC4;&#x5E38;&#x91CF;</p>
+<pre><code class="lang-javascript">log.levels = {
+  DEBUG: <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;debug&apos;</span>),
+  INFO: <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;info&apos;</span>),
+  WARN: <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;warn&apos;</span>)
+};
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>&#x7C7B;&#x578B;&#x8F6C;&#x6362;&#xFF1A;</p>
+<ul>
+<li><p>&#x8F6C;&#x6210;&#x5B57;&#x7B26;&#x4E32;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">String</span>(sym) <span class="hljs-comment">// &apos;Symbol(My symbol)&apos;</span>
+sym.toString() <span class="hljs-comment">// &apos;Symbol(My symbol)&apos;</span>
+</code></pre>
+</li>
+<li><p>&#x8F6C;&#x6210;&#x5E03;&#x5C14;&#x503C;</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">Boolean</span>(sym)
+!sym
+</code></pre>
+</li>
+<li><p>&#x4E0D;&#x80FD;&#x8F6C;&#x6210;&#x6570;&#x5B57;</p>
+</li>
+<li><p>&#x4E0D;&#x80FD;&#x4E0E;&#x5176;&#x4ED6;&#x7C7B;&#x578B;&#x7684;&#x503C;&#x8FDB;&#x884C;&#x8FD0;&#x7B97;</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> sym = <span class="hljs-built_in">Symbol</span>(<span class="hljs-string">&apos;My symbol&apos;</span>);
+
+<span class="hljs-string">&quot;your symbol is &quot;</span> + sym
+<span class="hljs-comment">// TypeError: can&apos;t convert symbol to string</span>
+<span class="hljs-string">`your symbol is <span class="hljs-subst">${sym}</span>`</span>
+<span class="hljs-comment">// TypeError: can&apos;t convert symbol to string</span>
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>&#x5C5E;&#x6027;&#xFF1A;Symbol.prototype.description</p>
+</li>
+<li>Symbol.for()&#xFF0C;Symbol.keyFor()<ul>
+<li>&#x5728;&#x5168;&#x5C40;&#x73AF;&#x5883;&#x4E2D;&#x767B;&#x8BB0; Symbol &#x503C;&#x3002;&#x4E4B;&#x540E;&#x4E0D;&#x4F1A;&#x518D;&#x91CD;&#x590D;&#x751F;&#x6210;</li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x5982;&#x4F55;&#x5224;&#x65AD;&#x7C7B;&#x578B;">&#x5982;&#x4F55;&#x5224;&#x65AD;&#x7C7B;&#x578B;</h2>
+<p>typeof()&#xFF0C;instanceof&#xFF0C;Object.prototype.toString.call()</p>
+<ul>
+<li><p><code>typeof</code>&#x64CD;&#x4F5C;&#x7B26;</p>
+<ul>
+<li>&quot;undefined&quot;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x672A;&#x5B9A;&#x4E49;; </li>
+<li>&quot;boolean&quot;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5E03;&#x5C14;&#x503C;; </li>
+<li>&quot;string&quot;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5B57;&#x7B26;&#x4E32;;</li>
+<li>&quot;number&quot;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x6570;&#x503C;;</li>
+<li>&quot;object&quot;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x5BF9;&#x8C61;&#x6216; null; </li>
+<li>&quot;function&quot;&#x2014;&#x2014;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x51FD;&#x6570;&#x3002;</li>
+<li>&quot;symbol&quot;&#x2014;&#x2014;es6&#x65B0;&#x589E;&#x7684;symbol&#x7C7B;&#x578B;</li>
+</ul>
+</li>
+<li><p><code>instanceof</code>&#xFF1A;&#x7528;&#x6765;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x662F;&#x4E0D;&#x662F;&#x67D0;&#x4E2A;&#x6784;&#x9020;&#x51FD;&#x6570;&#x7684;&#x5B9E;&#x4F8B;&#x3002;&#x4F1A;&#x6CBF;&#x7740;&#x539F;&#x578B;&#x94FE;&#x627E;&#x7684;</p>
+</li>
+<li><p><code>Object.prototype.toString.call()</code></p>
+<pre><code class="lang-js"><span class="hljs-keyword">var</span> toString = <span class="hljs-built_in">Object</span>.prototype.toString;
+
+toString.call(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>); <span class="hljs-comment">// [object Date]</span>
+toString.call(<span class="hljs-keyword">new</span> <span class="hljs-built_in">String</span>); <span class="hljs-comment">// [object String]</span>
+toString.call(<span class="hljs-built_in">Math</span>); <span class="hljs-comment">// [object Math]</span>
+toString.call([]); <span class="hljs-comment">// [Object Array]</span>
+toString.call(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Number</span>) <span class="hljs-comment">// [object Number]</span>
+toString.call(<span class="hljs-literal">true</span>) <span class="hljs-comment">// [object Boolean]</span>
+toString.call(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{}) <span class="hljs-comment">// [object Function]</span>
+toString.call({}) <span class="hljs-comment">// [object Object]</span>
+toString.call(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(() =&gt; {})) <span class="hljs-comment">// [object Promise]</span>
+
+toString.call(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Map</span>) <span class="hljs-comment">// [object Map]</span>
+toString.call(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>) <span class="hljs-comment">// [object RegExp]</span>
+toString.call(<span class="hljs-built_in">Symbol</span>()) <span class="hljs-comment">// [object Symbol]</span>
+toString.call(<span class="hljs-function"><span class="hljs-keyword">function</span> *<span class="hljs-title">a</span>(<span class="hljs-params"></span>)</span>{}) <span class="hljs-comment">// [object GeneratorFunction]</span>
+toString.call(<span class="hljs-keyword">new</span> DOMException()) <span class="hljs-comment">// [object DOMException]</span>
+toString.call(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Error</span>) <span class="hljs-comment">// [object Error]</span>
+
+toString.call(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// [object Undefined]</span>
+toString.call(<span class="hljs-literal">null</span>); <span class="hljs-comment">// [object Null]</span>
+
+<span class="hljs-comment">// &#x8FD8;&#x6709; WeakMap&#x3001; WeakSet&#x3001;Proxy &#x7B49;</span>
+</code></pre>
+</li>
+</ul>
+<h2 id="&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6570;&#x7EC4;">&#x5224;&#x65AD;&#x662F;&#x5426;&#x662F;&#x6570;&#x7EC4;</h2>
+<ol>
+<li><code>Array.isArray(arr)</code></li>
+<li><code>Object.prototype.toString.call(arr) === &apos;[Object Array]&apos;</code></li>
+<li><code>arr instanceof Array</code></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="this.html" class="navigation navigation-prev " aria-label="Previous page: this 指向">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="closure.html" class="navigation navigation-next " aria-label="Next page: 闭包有什么用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"数据类型","level":"1.3.3","depth":2,"next":{"title":"闭包有什么用","level":"1.3.4","depth":2,"path":"js-basic/closure.md","ref":"js-basic/closure.md","articles":[]},"previous":{"title":"this 指向","level":"1.3.2","depth":2,"path":"js-basic/this.md","ref":"js-basic/this.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","mermaid-gb3","simple-page-toc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gioia Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"面试集","gitbook":"*","description":"到处搜罗来的面试题目！"},"file":{"path":"js-basic/type.md","mtime":"2020-03-30T15:00:42.718Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-31T15:30:52.879Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+

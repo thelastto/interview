@@ -1,0 +1,6 @@
+{
+    "title": "面试集",
+    "description": "到处搜罗来的面试题目！",
+    "author": "Gioia Xu",
+    "plugins": ["chapter-fold", "mermaid-gb3", "simple-page-toc"]
+}
