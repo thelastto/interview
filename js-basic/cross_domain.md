@@ -45,7 +45,53 @@ var script = document.createElement("script");
 script.src = "http://freegeoip.net/json/?callback=handleResponse"; document.body.insertBefore(script, document.body.firstChild);
 ```
 
-
+- JSON只支持get，因为script标签只能使用get请求；
+- JSONP需要后端配合返回指定格式的数据。
 
 ## 图像 ping
 
+
+
+## 代理
+
+起一个代理服务器，实现数据的转发
+
+## 利用 iframe
+
+- window.postMessage
+- Cross Frame(aba)
+- window.name
+
+[http://lovelock.coding.me/javascript/2015-08-10-iframe%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E6%B3%95%E6%80%BB%E7%BB%93/#window-name](http://lovelock.coding.me/javascript/2015-08-10-iframe间通信方法总结/#window-name)
+
+
+
+### window.postMessage
+
+只支持到IE8及以上的IE浏览器，其他现代浏览器当然没有问题。
+
+#### child 与 parent 通信
+
+不受[同源策略](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)的限制
+
+- 给接收数据的一方添加事件绑定：`addEventListener('message', receiveMessage);`
+
+- 发送数据的一方拿到接收数据一方的window：`targetWindow.postMessage("Welcome to unixera.com", "http://iframe1.unixera.com");`
+
+#### chilid 与 child 通信
+
+有跨域问题，只适合站内不同子域间的通信（设置document.domain为同一级域名）
+
+
+
+### Cross Frame
+
+这是一个通用的方法，简单来说是A iframe包含B iframe，在B iframe中调用了相关的接口，完成调用之后获取到结果，`location.href`到和A iframe位于同一个域的C iframe，在C iframe中调用A iframe中定义的方法，将B iframe中获取的结果作为参数传到要跳转的url后，在C iframe中通过`location.search`变量来获取变量。
+
+![iframe通信](https://tva1.sinaimg.cn/large/00831rSTly1gco3r27dd6j30ly0a4dg3.jpg)
+
+
+
+### window.name
+
+`window`对象的`name`属性是一个很特殊的属性，在设定了`window.name`之后，执行`location.href`跳转，`window.name`属性仍然不会发生变化，可以通过这种方式实现变量的传递。

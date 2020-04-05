@@ -74,6 +74,7 @@ Undefined、Null、Boolean、Number 、String、Symbol
 
 - 属性：Symbol.prototype.description
 - Symbol.for()，Symbol.keyFor()
+  
   - 在全局环境中登记 Symbol 值。之后不会再重复生成
 
 ## 如何判断类型
@@ -126,3 +127,8 @@ typeof()，instanceof，Object.prototype.toString.call()
 2. `Object.prototype.toString.call(arr) === '[Object Array]' `
 3. `arr instanceof Array`
 
+
+
+## 字符串转数字
+
+`parseInt(string, radix)`
