@@ -69,7 +69,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../js-basic/" />
+    <link rel="next" href="search.html" />
     
     
     <link rel="prev" href="full_permutate.html" />
@@ -160,6 +160,19 @@
             
                     
                     排序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="search.html">
+            
+                <a href="search.html">
+            
+                    
+                    搜索
             
                 </a>
             
@@ -620,7 +633,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.6.2" data-path="../cs/os.html">
+        <li class="chapter " data-level="1.6.2" data-path="../cs/http.html">
+            
+                <a href="../cs/http.html">
+            
+                    
+                    HTTP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../cs/os.html">
             
                 <a href="../cs/os.html">
             
@@ -822,6 +848,196 @@
                                 <h1 id="&#x6392;&#x5E8F;">&#x6392;&#x5E8F;</h1>
 <p><a href="https://visualgo.net/zh/sorting" target="_blank">https://visualgo.net/zh/sorting</a></p>
 <h2 id="&#x5192;&#x6CE1;&#x6392;&#x5E8F;">&#x5192;&#x6CE1;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-js"><span class="hljs-comment">/*
+&#x7B2C;1&#x6B21;&#x5FAA;&#x73AF;&#x786E;&#x5B9A;&#x6700;&#x5927;&#x7684;
+&#x7B2C;n&#x6B21;&#x5FAA;&#x73AF;&#x786E;&#x5B9A;&#x7B2C;n&#x5927;&#x7684;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">BubbleSort</span> (<span class="hljs-params">arr</span>) </span>{
+    <span class="hljs-keyword">const</span> length = arr.length
+
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length; i++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">1</span>; j &lt; length-i; j++) {
+            <span class="hljs-keyword">if</span> (arr[j] &lt; arr[j - <span class="hljs-number">1</span>]) {
+                <span class="hljs-keyword">const</span> temp = arr[j]
+                arr[j] = arr[j - <span class="hljs-number">1</span>]
+                arr[j - <span class="hljs-number">1</span>] = temp
+            }
+        }
+    }
+
+    <span class="hljs-keyword">return</span> arr
+}
+</code></pre>
+<h2 id="&#x5FEB;&#x901F;&#x6392;&#x5E8F;">&#x5FEB;&#x901F;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-js"><span class="hljs-comment">/*
+&#x5728;&#x5DE6;&#x8FB9;&#x627E;&#x5927;&#x6570;&#xFF0C;&#x5728;&#x53F3;&#x8FB9;&#x627E;&#x5C0F;&#x6570;
+&#x4EA4;&#x6362;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">QuickSort</span>(<span class="hljs-params">arr, low, high</span>) </span>{
+    <span class="hljs-keyword">let</span> left = low
+    <span class="hljs-keyword">let</span> right = high
+    <span class="hljs-keyword">let</span> basic = arr[low]
+    <span class="hljs-keyword">while</span> (left &lt; right) {
+        <span class="hljs-keyword">while</span> (left &lt; right &amp;&amp; arr[right] &gt; basic) {
+            right--
+        }
+        <span class="hljs-keyword">while</span> (left &lt; right &amp;&amp; arr[left] &lt;= basic) {
+            left++
+        }
+
+        <span class="hljs-keyword">if</span> (left &lt; right) {
+            <span class="hljs-keyword">const</span> temp = arr[left]
+            arr[left] = arr[right]
+            arr[right] = temp
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">const</span> temp = arr[low]
+            arr[low] = arr[left]
+            arr[left] = temp
+
+            QuickSort(arr, low, left - <span class="hljs-number">1</span>)
+            QuickSort(arr, right + <span class="hljs-number">1</span>, high)
+        }
+    }
+
+    <span class="hljs-keyword">return</span> arr
+}
+</code></pre>
+<h2 id="&#x9009;&#x62E9;&#x6392;&#x5E8F;">&#x9009;&#x62E9;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-js"><span class="hljs-comment">/*
+ &#x5BFB;&#x627E;&#x7B2C;i&#x5C0F;&#x7684;&#x6570;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x653E;&#x5230;i&#x4F4D;&#x7F6E;&#x4E0A;
+ */</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">SelectionSort</span> (<span class="hljs-params">arr</span>) </span>{
+    <span class="hljs-keyword">const</span> length = arr.length
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; length; i++ ) {
+        <span class="hljs-keyword">let</span> minIndex= i
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = i + <span class="hljs-number">1</span>; j &lt; length; j++) {
+            minIndex = arr[minIndex] &lt;= arr[j] ? minIndex : j
+        }
+        <span class="hljs-keyword">if</span> (minIndex !== i) {
+            <span class="hljs-keyword">const</span> temp = arr[i]
+            arr[i] = arr[minIndex]
+            arr[minIndex] = temp
+
+        }
+    }
+    <span class="hljs-keyword">return</span> arr
+}
+</code></pre>
+<h2 id="&#x63D2;&#x5165;&#x6392;&#x5E8F;">&#x63D2;&#x5165;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">InsertionSort</span> (<span class="hljs-params">arr</span>) </span>{
+    <span class="hljs-keyword">const</span> length = arr.length
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>; i &lt; length; i++) {
+        <span class="hljs-keyword">const</span> temp = arr[i]
+        <span class="hljs-keyword">let</span> j
+        <span class="hljs-keyword">for</span> (j = i - <span class="hljs-number">1</span>; j &gt;= <span class="hljs-number">0</span> &amp;&amp; temp &lt; arr[j]; j--) {
+            arr[j+<span class="hljs-number">1</span>] = arr[j]
+        }
+        arr[j+<span class="hljs-number">1</span>] = temp
+    }
+    <span class="hljs-keyword">return</span> arr
+}
+</code></pre>
+<h2 id="&#x5E0C;&#x5C14;&#x6392;&#x5E8F;">&#x5E0C;&#x5C14;&#x6392;&#x5E8F;</h2>
+<p>&#x63D2;&#x5165;&#x6392;&#x5E8F;&#x7684;&#x6539;&#x8FDB;&#x7248;&#x3002;&#x5BF9;&#x95F4;&#x9694; gap &#x4E3A;&#x4E00;&#x7EC4;&#x7684;&#x6570;&#x8FDB;&#x884C;&#x63D2;&#x5165;&#x6392;&#x5E8F;</p>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">ShellSort</span> (<span class="hljs-params">arr</span>) </span>{
+    <span class="hljs-keyword">const</span> length = arr.length
+    <span class="hljs-keyword">let</span> gap = <span class="hljs-built_in">Math</span>.floor(length)
+    <span class="hljs-keyword">while</span> (gap) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = gap; i &lt; length; i++) {
+            <span class="hljs-keyword">const</span> temp = arr[i]
+            <span class="hljs-keyword">let</span> j
+            <span class="hljs-keyword">for</span> (j = i - gap; j &gt;= <span class="hljs-number">0</span> &amp;&amp; temp &lt; arr[j]; j = j - gap) {
+                arr[j + gap] = arr[j]
+            }
+            arr[j + gap] = temp
+        }
+        gap = <span class="hljs-built_in">Math</span>.floor(gap / <span class="hljs-number">2</span>)
+    }
+    <span class="hljs-keyword">return</span> arr
+}
+</code></pre>
+<h2 id="&#x5F52;&#x5E76;&#x6392;&#x5E8F;">&#x5F52;&#x5E76;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">MergeSort</span> (<span class="hljs-params">arr, low, high</span>) </span>{
+    <span class="hljs-keyword">const</span> length = arr.length
+    <span class="hljs-keyword">if</span> (low === high) {
+        <span class="hljs-keyword">return</span> arr[low]
+    }
+    <span class="hljs-keyword">const</span> mid = <span class="hljs-built_in">Math</span>.floor((low + high)/<span class="hljs-number">2</span>)
+    MergeSort(arr, low, mid)
+    MergeSort(arr, mid + <span class="hljs-number">1</span>, high)
+    merge(arr, low, high)
+    <span class="hljs-keyword">return</span> arr
+
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">merge</span> (<span class="hljs-params">arr, low, high</span>) </span>{
+    <span class="hljs-keyword">const</span> mid = <span class="hljs-built_in">Math</span>.floor((low + high)/<span class="hljs-number">2</span>)
+    <span class="hljs-keyword">let</span> left = low
+    <span class="hljs-keyword">let</span> right = mid + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">const</span> result = []
+    <span class="hljs-keyword">while</span> (left &lt;= mid &amp;&amp; right &lt;= high) {
+        <span class="hljs-keyword">if</span> (arr[left] &lt;= arr[right]) {
+            result.push(arr[left++])
+        } <span class="hljs-keyword">else</span> {
+            result.push(arr[right++])
+        }
+    }
+    <span class="hljs-keyword">while</span> (left &lt;= mid) {
+        result.push(arr[left++])
+    }
+    <span class="hljs-keyword">while</span> (right &lt;= high) {
+        result.push(arr[right++])
+    }
+
+    arr.splice(low, high-low+<span class="hljs-number">1</span>, ...result)
+}
+
+<span class="hljs-keyword">const</span> test = [<span class="hljs-number">2</span>, <span class="hljs-number">34</span>, <span class="hljs-number">452</span>,<span class="hljs-number">3</span>,<span class="hljs-number">5</span>, <span class="hljs-number">785</span>, <span class="hljs-number">32</span>, <span class="hljs-number">345</span>, <span class="hljs-number">567</span>, <span class="hljs-number">322</span>,<span class="hljs-number">5</span>]
+
+<span class="hljs-built_in">console</span>.log(MergeSort(test, <span class="hljs-number">0</span>, test.length - <span class="hljs-number">1</span>))
+</code></pre>
+<h2 id="&#x5806;&#x6392;&#x5E8F;">&#x5806;&#x6392;&#x5E8F;</h2>
+<pre><code class="lang-js"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">HeapSort</span> (<span class="hljs-params">arr</span>) </span>{
+    <span class="hljs-keyword">const</span> length = arr.length
+
+    <span class="hljs-comment">// &#x8C03;&#x6574;&#x521D;&#x59CB;&#x5806;&#xFF0C;&#x8C03;&#x6574;&#x5B8C;&#x5176;&#x5B9E;&#x4E5F;&#x786E;&#x5B9A;&#x4E86;&#x6700;&#x5927;&#x503C;</span>
+    <span class="hljs-comment">// &#x4F46;&#x6B64;&#x65F6;&#x6700;&#x5927;&#x503C;&#x662F;&#x5728; arr[0] &#x4E2D;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-built_in">Math</span>.floor(length/<span class="hljs-number">2</span>) - <span class="hljs-number">1</span>; i &gt;= <span class="hljs-number">0</span>; i--) {
+        adjustHeap(arr, i, length)
+    }
+
+    <span class="hljs-comment">// &#x628A; arr[0](&#x6700;&#x5927;&#x503C;)&#x6362;&#x5230;&#x540E;&#x9762;</span>
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = length - <span class="hljs-number">1</span>; i &gt;=<span class="hljs-number">0</span>; i--) {
+        <span class="hljs-keyword">const</span> temp = arr[<span class="hljs-number">0</span>]
+        arr[<span class="hljs-number">0</span>] = arr[i]
+        arr[i] = temp
+        adjustHeap(arr, <span class="hljs-number">0</span>, i)
+    }
+
+    <span class="hljs-keyword">return</span> arr
+}
+
+<span class="hljs-comment">// size &#x662F;&#x8FD8;&#x9700;&#x8981;&#x8C03;&#x6574;&#x7684;&#x5806;&#x7684;&#x5927;&#x5C0F;</span>
+<span class="hljs-comment">// &#x968F;&#x7740;&#x4E00;&#x4E2A;&#x4E2A;&#x6700;&#x5927;&#x503C;&#x7684;&#x786E;&#x5B9A;&#xFF0C;size &#x4F1A;&#x8D8A;&#x6765;&#x8D8A;&#x5C0F;</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">adjustHeap</span> (<span class="hljs-params">arr, position, size</span>) </span>{
+    <span class="hljs-keyword">const</span> left = position * <span class="hljs-number">2</span> + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">const</span> right = left + <span class="hljs-number">1</span>
+    <span class="hljs-keyword">let</span> maxIndex = position
+    <span class="hljs-keyword">if</span> (left &lt; size &amp;&amp; arr[left] &gt; arr[maxIndex]) {
+        maxIndex = left
+    }
+    <span class="hljs-keyword">if</span> (right &lt; size &amp;&amp; arr[right] &gt; arr[maxIndex]) {
+        maxIndex = right
+    }
+    <span class="hljs-keyword">if</span> (maxIndex !== position) {
+        <span class="hljs-keyword">const</span> temp = arr[position]
+        arr[position] = arr[maxIndex]
+        arr[maxIndex] = temp
+        adjustHeap(arr, maxIndex, size)
+    }
+    <span class="hljs-keyword">return</span> arr
+}
+</code></pre>
 
                                 
                                 </section>
@@ -854,7 +1070,7 @@
                 </a>
                 
                 
-                <a href="../js-basic/" class="navigation navigation-next " aria-label="Next page: JS 基础">
+                <a href="search.html" class="navigation navigation-next " aria-label="Next page: 搜索">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -865,7 +1081,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"排序","level":"1.2.3","depth":2,"next":{"title":"JS 基础","level":"1.3","depth":1,"path":"js-basic/README.md","ref":"js-basic/README.md","articles":[{"title":"继承","level":"1.3.1","depth":2,"path":"js-basic/extends.md","ref":"js-basic/extends.md","articles":[]},{"title":"？bind","level":"1.3.2","depth":2,"path":"js-basic/bind.md","ref":"js-basic/bind.md","articles":[]},{"title":"this 指向","level":"1.3.3","depth":2,"path":"js-basic/this.md","ref":"js-basic/this.md","articles":[]},{"title":"数据类型","level":"1.3.4","depth":2,"path":"js-basic/type.md","ref":"js-basic/type.md","articles":[]},{"title":"如何解决异步回调地狱","level":"1.3.5","depth":2,"path":"js-basic/async.md","ref":"js-basic/async.md","articles":[]},{"title":"闭包有什么用","level":"1.3.6","depth":2,"path":"js-basic/closure.md","ref":"js-basic/closure.md","articles":[]},{"title":"？加载","level":"1.3.7","depth":2,"path":"js-basic/load.md","ref":"js-basic/load.md","articles":[]},{"title":"事件","level":"1.3.8","depth":2,"path":"js-basic/event.md","ref":"js-basic/event.md","articles":[]},{"title":"跨域","level":"1.3.9","depth":2,"path":"js-basic/cross_domain.md","ref":"js-basic/cross_domain.md","articles":[]},{"title":"ajax","level":"1.3.10","depth":2,"path":"js-basic/ajax.md","ref":"js-basic/ajax.md","articles":[]},{"title":"？BOM","level":"1.3.11","depth":2,"path":"js-basic/BOM.md","ref":"js-basic/BOM.md","articles":[]},{"title":"垃圾回收机制","level":"1.3.12","depth":2,"path":"js-basic/gc.md","ref":"js-basic/gc.md","articles":[]},{"title":"eval是做什么的","level":"1.3.13","depth":2,"path":"js-basic/eval.md","ref":"js-basic/eval.md","articles":[]},{"title":"监听对象属性的改变","level":"1.3.14","depth":2,"path":"js-basic/watch.md","ref":"js-basic/watch.md","articles":[]},{"title":"实现一个私有变量","level":"1.3.15","depth":2,"path":"js-basic/private_property.md","ref":"js-basic/private_property.md","articles":[]},{"title":"操作符","level":"1.3.16","depth":2,"path":"js-basic/operator.md","ref":"js-basic/operator.md","articles":[]},{"title":"js怎么控制一次加载一张图片，加载完后再加载下一张","level":"1.3.17","depth":2,"path":"js-basic/image.md","ref":"js-basic/image.md","articles":[]},{"title":"Function.proto === ?","level":"1.3.18","depth":2,"path":"js-basic/prototype.md","ref":"js-basic/prototype.md","articles":[]},{"title":"数组","level":"1.3.19","depth":2,"path":"js-basic/array.md","ref":"js-basic/array.md","articles":[]}]},"previous":{"title":"全排列","level":"1.2.2","depth":2,"path":"algorithm/full_permutate.md","ref":"algorithm/full_permutate.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","mermaid-gb3","simple-page-toc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gioia Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"面试集","gitbook":"*","description":"到处搜罗来的面试题目！"},"file":{"path":"algorithm/sort.md","mtime":"2020-04-05T14:31:23.666Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-05T11:22:26.738Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"排序","level":"1.2.3","depth":2,"next":{"title":"搜索","level":"1.2.4","depth":2,"path":"algorithm/search.md","ref":"algorithm/search.md","articles":[]},"previous":{"title":"全排列","level":"1.2.2","depth":2,"path":"algorithm/full_permutate.md","ref":"algorithm/full_permutate.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","mermaid-gb3","simple-page-toc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gioia Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"面试集","gitbook":"*","description":"到处搜罗来的面试题目！"},"file":{"path":"algorithm/sort.md","mtime":"2020-04-09T15:02:15.530Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-11T09:24:08.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
