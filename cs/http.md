@@ -81,3 +81,4 @@ GET和POST本质上就是TCP链接，并无差别。但是由于HTTP的规定和
 
 ## HTTP 常用请求头
 
+![http_request_header](../images/http_request_header.png)
