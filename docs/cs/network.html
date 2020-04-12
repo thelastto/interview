@@ -517,7 +517,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../js-skill/once.html">
+        <li class="chapter " data-level="1.4.5" data-path="../js-skill/new.html">
+            
+                <a href="../js-skill/new.html">
+            
+                    
+                    实现一个 new
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../js-skill/once.html">
             
                 <a href="../js-skill/once.html">
             
@@ -530,7 +543,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.6" data-path="../js-skill/promise.html">
+        <li class="chapter " data-level="1.4.7" data-path="../js-skill/promise.html">
             
                 <a href="../js-skill/promise.html">
             
@@ -543,7 +556,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.7" data-path="../js-skill/sleep.html">
+        <li class="chapter " data-level="1.4.8" data-path="../js-skill/sleep.html">
             
                 <a href="../js-skill/sleep.html">
             
@@ -854,7 +867,6 @@
 <li><a href="#dns-%E8%A7%A3%E6%9E%90">DNS &#x89E3;&#x6790;</a></li>
 </ul>
 </li>
-<li><a href="#http-%E5%B8%B8%E7%94%A8%E8%AF%B7%E6%B1%82%E5%A4%B4">HTTP &#x5E38;&#x7528;&#x8BF7;&#x6C42;&#x5934;</a></li>
 <li><a href="#osi-%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B">OSI &#x4E03;&#x5C42;&#x6A21;&#x578B;</a></li>
 <li><a href="#tcp%E5%92%8Cudp%E7%9A%84%E5%8C%BA%E5%88%AB">TCP&#x548C;UDP&#x7684;&#x533A;&#x522B;</a><ul>
 <li><a href="#udp">UDP</a></li>
@@ -889,146 +901,6 @@ D --&gt; E[&#x6D4F;&#x89C8;&#x5668;&#x6E32;&#x67D3;]
 <li>ISP &#x7684; DNS &#x670D;&#x52A1;&#x5668;&#xFF1A;ISP &#x662F;&#x4E92;&#x8054;&#x7F51;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x5546;(Internet Service Provider)&#x7684;&#x7B80;&#x79F0;&#xFF0C;ISP &#x6709;&#x4E13;&#x95E8;&#x7684; DNS &#x670D;&#x52A1;&#x5668;&#x5E94;&#x5BF9; DNS &#x67E5;&#x8BE2;&#x8BF7;&#x6C42;&#x3002;</li>
 <li>&#x6839;&#x670D;&#x52A1;&#x5668;&#xFF1A;ISP &#x7684; DNS &#x670D;&#x52A1;&#x5668;&#x8FD8;&#x627E;&#x4E0D;&#x5230;&#x7684;&#x8BDD;&#xFF0C;&#x5B83;&#x5C31;&#x4F1A;&#x5411;&#x6839;&#x670D;&#x52A1;&#x5668;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#xFF0C;&#x8FDB;&#x884C;&#x9012;&#x5F52;&#x67E5;&#x8BE2;&#xFF08;DNS &#x670D;&#x52A1;&#x5668;&#x5148;&#x95EE;&#x6839;&#x57DF;&#x540D;&#x670D;&#x52A1;&#x5668;.com &#x57DF;&#x540D;&#x670D;&#x52A1;&#x5668;&#x7684; IP &#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x95EE;.baidu &#x57DF;&#x540D;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x4F9D;&#x6B21;&#x7C7B;&#x63A8;&#xFF09;</li>
 </ul>
-<h2 id="http-&#x5E38;&#x7528;&#x8BF7;&#x6C42;&#x5934;">HTTP &#x5E38;&#x7528;&#x8BF7;&#x6C42;&#x5934;</h2>
-<p>&#x53EF;&#x4EE5;&#x5C06;http&#x9996;&#x90E8;&#x5206;&#x4E3A;&#x901A;&#x7528;&#x9996;&#x90E8;&#xFF0C;&#x8BF7;&#x6C42;&#x9996;&#x90E8;&#xFF0C;&#x54CD;&#x5E94;&#x9996;&#x90E8;&#xFF0C;&#x5B9E;&#x4F53;&#x9996;&#x90E8;</p>
-<table>
-<thead>
-<tr>
-<th>&#x534F;&#x8BAE;&#x5934;</th>
-<th>&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Accept</td>
-<td>&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x7C7B;&#x578B;&#xFF08;Content-Types&#xFF09;&#x3002;</td>
-</tr>
-<tr>
-<td>Accept-Charset</td>
-<td>&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x5B57;&#x7B26;&#x96C6;</td>
-</tr>
-<tr>
-<td>Accept-Encoding</td>
-<td>&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#x3002;</td>
-</tr>
-<tr>
-<td>Accept-Language</td>
-<td>&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x8BED;&#x8A00;&#x5217;&#x8868;&#x3002;</td>
-</tr>
-<tr>
-<td>Accept-Datetime</td>
-<td>&#x53EF;&#x63A5;&#x53D7;&#x7684;&#x6309;&#x7167;&#x65F6;&#x95F4;&#x6765;&#x8868;&#x793A;&#x7684;&#x54CD;&#x5E94;&#x5185;&#x5BB9;&#x7248;&#x672C;</td>
-</tr>
-<tr>
-<td>Authorization</td>
-<td>&#x7528;&#x4E8E;&#x8868;&#x793A;HTTP&#x534F;&#x8BAE;&#x4E2D;&#x9700;&#x8981;&#x8BA4;&#x8BC1;&#x8D44;&#x6E90;&#x7684;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;</td>
-</tr>
-<tr>
-<td>Cache-Control</td>
-<td>&#x7528;&#x6765;&#x6307;&#x5B9A;&#x5F53;&#x524D;&#x7684;&#x8BF7;&#x6C42;/&#x56DE;&#x590D;&#x4E2D;&#x7684;&#xFF0C;&#x662F;&#x5426;&#x4F7F;&#x7528;&#x7F13;&#x5B58;&#x673A;&#x5236;&#x3002;</td>
-</tr>
-<tr>
-<td>Connection</td>
-<td>&#x5BA2;&#x6237;&#x7AEF;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x60F3;&#x8981;&#x4F18;&#x5148;&#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x7C7B;&#x578B;</td>
-</tr>
-<tr>
-<td>Cookie</td>
-<td>&#x7531;&#x4E4B;&#x524D;&#x670D;&#x52A1;&#x5668;&#x901A;&#x8FC7;Set-Cookie&#xFF08;&#x89C1;&#x4E0B;&#x6587;&#xFF09;&#x8BBE;&#x7F6E;&#x7684;&#x4E00;&#x4E2A;HTTP&#x534F;&#x8BAE;Cookie</td>
-</tr>
-<tr>
-<td>Content-Length</td>
-<td>&#x4EE5;8&#x8FDB;&#x5236;&#x8868;&#x793A;&#x7684;&#x8BF7;&#x6C42;&#x4F53;&#x7684;&#x957F;&#x5EA6;</td>
-</tr>
-<tr>
-<td>Content-MD5</td>
-<td>&#x8BF7;&#x6C42;&#x4F53;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x4E8C;&#x8FDB;&#x5236; MD5 &#x6563;&#x5217;&#x503C;&#xFF08;&#x6570;&#x5B57;&#x7B7E;&#x540D;&#xFF09;&#xFF0C;&#x4EE5; Base64 &#x7F16;&#x7801;&#x7684;&#x7ED3;&#x679C;</td>
-</tr>
-<tr>
-<td>Content-Type</td>
-<td>&#x8BF7;&#x6C42;&#x4F53;&#x7684;MIME&#x7C7B;&#x578B; &#xFF08;&#x7528;&#x4E8E;POST&#x548C;PUT&#x8BF7;&#x6C42;&#x4E2D;&#xFF09;</td>
-</tr>
-<tr>
-<td>Date</td>
-<td>&#x53D1;&#x9001;&#x8BE5;&#x6D88;&#x606F;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#xFF08;&#x4EE5;<a href="https://www.nowcoder.com/tutorial/96/24304825a0c04ea9a53cdb09cb664834#section-7.1.1.1" target="_blank">RFC 7231</a>&#x4E2D;&#x5B9A;&#x4E49;&#x7684;&quot;HTTP&#x65E5;&#x671F;&quot;&#x683C;&#x5F0F;&#x6765;&#x53D1;&#x9001;&#xFF09;</td>
-</tr>
-<tr>
-<td>Expect</td>
-<td>&#x8868;&#x793A;&#x5BA2;&#x6237;&#x7AEF;&#x8981;&#x6C42;&#x670D;&#x52A1;&#x5668;&#x505A;&#x51FA;&#x7279;&#x5B9A;&#x7684;&#x884C;&#x4E3A;</td>
-</tr>
-<tr>
-<td>From</td>
-<td>&#x53D1;&#x8D77;&#x6B64;&#x8BF7;&#x6C42;&#x7684;&#x7528;&#x6237;&#x7684;&#x90AE;&#x4EF6;&#x5730;&#x5740;</td>
-</tr>
-<tr>
-<td>Host</td>
-<td>&#x8868;&#x793A;&#x670D;&#x52A1;&#x5668;&#x7684;&#x57DF;&#x540D;&#x4EE5;&#x53CA;&#x670D;&#x52A1;&#x5668;&#x6240;&#x76D1;&#x542C;&#x7684;&#x7AEF;&#x53E3;&#x53F7;&#x3002;&#x5982;&#x679C;&#x6240;&#x8BF7;&#x6C42;&#x7684;&#x7AEF;&#x53E3;&#x662F;&#x5BF9;&#x5E94;&#x7684;&#x670D;&#x52A1;&#x7684;&#x6807;&#x51C6;&#x7AEF;&#x53E3;&#xFF08;80&#xFF09;&#xFF0C;&#x5219;&#x7AEF;&#x53E3;&#x53F7;&#x53EF;&#x4EE5;&#x7701;&#x7565;&#x3002;</td>
-</tr>
-<tr>
-<td>If-Match</td>
-<td>&#x4EC5;&#x5F53;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&#x7684;&#x5B9E;&#x4F53;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x5BF9;&#x5E94;&#x7684;&#x5B9E;&#x4F53;&#x76F8;&#x5339;&#x914D;&#x65F6;&#xFF0C;&#x624D;&#x8FDB;&#x884C;&#x5BF9;&#x5E94;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x50CF; PUT &#x8FD9;&#x6837;&#x7684;&#x65B9;&#x6CD5;&#x4E2D;&#xFF0C;&#x4EC5;&#x5F53;&#x4ECE;&#x7528;&#x6237;&#x4E0A;&#x6B21;&#x66F4;&#x65B0;&#x67D0;&#x4E2A;&#x8D44;&#x6E90;&#x540E;&#xFF0C;&#x8BE5;&#x8D44;&#x6E90;&#x672A;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x624D;&#x66F4;&#x65B0;&#x8BE5;&#x8D44;&#x6E90;&#x3002;</td>
-</tr>
-<tr>
-<td>If-Modified-Since</td>
-<td>&#x5141;&#x8BB8;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x8D44;&#x6E90;&#x672A;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8FD4;&#x56DE;304&#x672A;&#x4FEE;&#x6539;</td>
-</tr>
-<tr>
-<td>If-None-Match</td>
-<td>&#x5141;&#x8BB8;&#x5728;&#x5BF9;&#x5E94;&#x7684;&#x5185;&#x5BB9;&#x672A;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x8FD4;&#x56DE;304&#x672A;&#x4FEE;&#x6539;&#xFF08; 304 Not Modified &#xFF09;&#xFF0C;&#x53C2;&#x8003; &#x8D85;&#x6587;&#x672C;&#x4F20;&#x8F93;&#x534F;&#x8BAE; &#x7684;&#x5B9E;&#x4F53;&#x6807;&#x8BB0;</td>
-</tr>
-<tr>
-<td>If-Range</td>
-<td>&#x5982;&#x679C;&#x8BE5;&#x5B9E;&#x4F53;&#x672A;&#x88AB;&#x4FEE;&#x6539;&#x8FC7;&#xFF0C;&#x5219;&#x5411;&#x8FD4;&#x56DE;&#x6240;&#x7F3A;&#x5C11;&#x7684;&#x90A3;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x90E8;&#x5206;&#x3002;&#x5426;&#x5219;&#xFF0C;&#x8FD4;&#x56DE;&#x6574;&#x4E2A;&#x65B0;&#x7684;&#x5B9E;&#x4F53;</td>
-</tr>
-<tr>
-<td>If-Unmodified-Since</td>
-<td>&#x4EC5;&#x5F53;&#x8BE5;&#x5B9E;&#x4F53;&#x81EA;&#x67D0;&#x4E2A;&#x7279;&#x5B9A;&#x65F6;&#x95F4;&#x4EE5;&#x6765;&#x672A;&#x88AB;&#x4FEE;&#x6539;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x624D;&#x53D1;&#x9001;&#x56DE;&#x5E94;&#x3002;</td>
-</tr>
-<tr>
-<td>Max-Forwards</td>
-<td>&#x9650;&#x5236;&#x8BE5;&#x6D88;&#x606F;&#x53EF;&#x88AB;&#x4EE3;&#x7406;&#x53CA;&#x7F51;&#x5173;&#x8F6C;&#x53D1;&#x7684;&#x6B21;&#x6570;&#x3002;</td>
-</tr>
-<tr>
-<td>Origin</td>
-<td>&#x53D1;&#x8D77;&#x4E00;&#x4E2A;&#x9488;&#x5BF9;<a href="http://itbilu.com/javascript/js/VkiXuUcC.html" target="_blank">&#x8DE8;&#x57DF;&#x8D44;&#x6E90;&#x5171;&#x4EAB;</a>&#x7684;&#x8BF7;&#x6C42;&#xFF08;&#x8BE5;&#x8BF7;&#x6C42;&#x8981;&#x6C42;&#x670D;&#x52A1;&#x5668;&#x5728;&#x54CD;&#x5E94;&#x4E2D;&#x52A0;&#x5165;&#x4E00;&#x4E2A;Access-Control-Allow-Origin&#x7684;&#x6D88;&#x606F;&#x5934;&#xFF0C;&#x8868;&#x793A;&#x8BBF;&#x95EE;&#x63A7;&#x5236;&#x6240;&#x5141;&#x8BB8;&#x7684;&#x6765;&#x6E90;&#xFF09;&#x3002;</td>
-</tr>
-<tr>
-<td>Pragma</td>
-<td>&#x4E0E;&#x5177;&#x4F53;&#x7684;&#x5B9E;&#x73B0;&#x76F8;&#x5173;&#xFF0C;&#x8FD9;&#x4E9B;&#x5B57;&#x6BB5;&#x53EF;&#x80FD;&#x5728;&#x8BF7;&#x6C42;/&#x56DE;&#x5E94;&#x94FE;&#x4E2D;&#x7684;&#x4EFB;&#x4F55;&#x65F6;&#x5019;&#x4EA7;&#x751F;&#x3002;</td>
-</tr>
-<tr>
-<td>Proxy-Authorization</td>
-<td>&#x7528;&#x4E8E;&#x5411;&#x4EE3;&#x7406;&#x8FDB;&#x884C;&#x8BA4;&#x8BC1;&#x7684;&#x8BA4;&#x8BC1;&#x4FE1;&#x606F;&#x3002;</td>
-</tr>
-<tr>
-<td>Range</td>
-<td>&#x8868;&#x793A;&#x8BF7;&#x6C42;&#x67D0;&#x4E2A;&#x5B9E;&#x4F53;&#x7684;&#x4E00;&#x90E8;&#x5206;&#xFF0C;&#x5B57;&#x8282;&#x504F;&#x79FB;&#x4EE5;0&#x5F00;&#x59CB;&#x3002;</td>
-</tr>
-<tr>
-<td>Referer</td>
-<td>&#x8868;&#x793A;&#x6D4F;&#x89C8;&#x5668;&#x6240;&#x8BBF;&#x95EE;&#x7684;&#x524D;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#xFF0C;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x4E4B;&#x524D;&#x8BBF;&#x95EE;&#x9875;&#x9762;&#x7684;&#x94FE;&#x63A5;&#x5C06;&#x6D4F;&#x89C8;&#x5668;&#x5E26;&#x5230;&#x4E86;&#x5F53;&#x524D;&#x9875;&#x9762;&#x3002;Referer&#x5176;&#x5B9E;&#x662F;Referrer&#x8FD9;&#x4E2A;&#x5355;&#x8BCD;&#xFF0C;&#x4F46;RFC&#x5236;&#x4F5C;&#x6807;&#x51C6;&#x65F6;&#x7ED9;&#x62FC;&#x9519;&#x4E86;&#xFF0C;&#x540E;&#x6765;&#x4E5F;&#x5C31;&#x5C06;&#x9519;&#x5C31;&#x9519;&#x4F7F;&#x7528;Referer&#x4E86;&#x3002;</td>
-</tr>
-<tr>
-<td>TE</td>
-<td>&#x6D4F;&#x89C8;&#x5668;&#x9884;&#x671F;&#x63A5;&#x53D7;&#x7684;&#x4F20;&#x8F93;&#x65F6;&#x7684;&#x7F16;&#x7801;&#x65B9;&#x5F0F;&#xFF1A;&#x53EF;&#x4F7F;&#x7528;&#x56DE;&#x5E94;&#x534F;&#x8BAE;&#x5934;Transfer-Encoding&#x4E2D;&#x7684;&#x503C;&#xFF08;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&quot;trailers&quot;&#x8868;&#x793A;&#x6570;&#x636E;&#x4F20;&#x8F93;&#x65F6;&#x7684;&#x5206;&#x5757;&#x65B9;&#x5F0F;&#xFF09;&#x7528;&#x6765;&#x8868;&#x793A;&#x6D4F;&#x89C8;&#x5668;&#x5E0C;&#x671B;&#x5728;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5927;&#x5C0F;&#x4E3A;0&#x7684;&#x5757;&#x4E4B;&#x540E;&#x8FD8;&#x63A5;&#x6536;&#x5230;&#x4E00;&#x4E9B;&#x989D;&#x5916;&#x7684;&#x5B57;&#x6BB5;&#x3002;</td>
-</tr>
-<tr>
-<td>User-Agent</td>
-<td>&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x8EAB;&#x4EFD;&#x6807;&#x8BC6;&#x5B57;&#x7B26;&#x4E32;</td>
-</tr>
-<tr>
-<td>Upgrade</td>
-<td>&#x8981;&#x6C42;&#x670D;&#x52A1;&#x5668;&#x5347;&#x7EA7;&#x5230;&#x4E00;&#x4E2A;&#x9AD8;&#x7248;&#x672C;&#x534F;&#x8BAE;&#x3002;</td>
-</tr>
-<tr>
-<td>Via</td>
-<td>&#x544A;&#x8BC9;&#x670D;&#x52A1;&#x5668;&#xFF0C;&#x8FD9;&#x4E2A;&#x8BF7;&#x6C42;&#x662F;&#x7531;&#x54EA;&#x4E9B;&#x4EE3;&#x7406;&#x53D1;&#x51FA;&#x7684;&#x3002;</td>
-</tr>
-<tr>
-<td>Warning</td>
-<td>&#x4E00;&#x4E2A;&#x4E00;&#x822C;&#x6027;&#x7684;&#x8B66;&#x544A;&#xFF0C;&#x8868;&#x793A;&#x5728;&#x5B9E;&#x4F53;&#x5185;&#x5BB9;&#x4F53;&#x4E2D;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x9519;&#x8BEF;&#x3002;</td>
-</tr>
-</tbody>
-</table>
 <h2 id="osi-&#x4E03;&#x5C42;&#x6A21;&#x578B;">OSI &#x4E03;&#x5C42;&#x6A21;&#x578B;</h2>
 <p>&#x5E94;&#x7528;&#x5C42;&#xFF1A;&#x6587;&#x4EF6;&#x4F20;&#x8F93;&#xFF0C;&#x5E38;&#x7528;&#x534F;&#x8BAE;HTTP&#xFF0C;snmp,FTP ,</p>
 <p>&#x8868;&#x793A;&#x5C42;&#xFF1A;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x5316;&#xFF0C;&#x4EE3;&#x7801;&#x8F6C;&#x6362;&#xFF0C;&#x6570;&#x636E;&#x52A0;&#x5BC6;&#xFF0C;</p>
@@ -1138,7 +1010,7 @@ D --&gt; E[&#x6D4F;&#x89C8;&#x5668;&#x6E32;&#x67D3;]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"计算机网络","level":"1.6.1","depth":2,"next":{"title":"HTTP","level":"1.6.2","depth":2,"path":"cs/http.md","ref":"cs/http.md","articles":[]},"previous":{"title":"计算机基础","level":"1.6","depth":1,"path":"cs/README.md","ref":"cs/README.md","articles":[{"title":"计算机网络","level":"1.6.1","depth":2,"path":"cs/network.md","ref":"cs/network.md","articles":[]},{"title":"HTTP","level":"1.6.2","depth":2,"path":"cs/http.md","ref":"cs/http.md","articles":[]},{"title":"操作系统","level":"1.6.3","depth":2,"path":"cs/os.md","ref":"cs/os.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","mermaid-gb3","simple-page-toc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gioia Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"面试集","gitbook":"*","description":"到处搜罗来的面试题目！"},"file":{"path":"cs/network.md","mtime":"2020-04-11T05:48:45.968Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-11T09:24:08.952Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"计算机网络","level":"1.6.1","depth":2,"next":{"title":"HTTP","level":"1.6.2","depth":2,"path":"cs/http.md","ref":"cs/http.md","articles":[]},"previous":{"title":"计算机基础","level":"1.6","depth":1,"path":"cs/README.md","ref":"cs/README.md","articles":[{"title":"计算机网络","level":"1.6.1","depth":2,"path":"cs/network.md","ref":"cs/network.md","articles":[]},{"title":"HTTP","level":"1.6.2","depth":2,"path":"cs/http.md","ref":"cs/http.md","articles":[]},{"title":"操作系统","level":"1.6.3","depth":2,"path":"cs/os.md","ref":"cs/os.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","mermaid-gb3","simple-page-toc","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"simple-page-toc":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gioia Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"面试集","gitbook":"*","description":"到处搜罗来的面试题目！"},"file":{"path":"cs/network.md","mtime":"2020-04-11T15:12:45.423Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-11T09:24:08.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

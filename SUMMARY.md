@@ -31,6 +31,7 @@
     * [深拷贝](js-skill/deep_copy.md)
     * [数组展开](js-skill/flat.md)
     * [拖放](js-skill/drag.md)
+    * [实现一个 new](js-skill/new.md)
     * [once](js-skill/once.md)
     * [promise](js-skill/promise.md)
     * [sleep](js-skill/sleep.md)
