@@ -7,6 +7,7 @@
     * [排序](algorithm/sort.md)
     * [搜索](algorithm/search.md)
 * [JS 基础](js-basic/README.md)
+    * [事件循环](js-basic/event_loop.md)
     * [继承](js-basic/extends.md)
     * [？bind](js-basic/bind.md)
     * [this 指向](js-basic/this.md)
