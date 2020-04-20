@@ -1,7 +1,5 @@
 # BOM
 
-<!-- toc -->
-
 ## js 的各种位置，比如 clientHeight, scrollHeight, offsetHeight, 以及 scrollTop, offsetTop, clientTop 的区别？
 
 - `clientHeight`：表示的是可视区域的高度，不包含`border`和滚动条

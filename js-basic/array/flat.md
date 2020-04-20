@@ -1,6 +1,6 @@
-# 数组展开
+# 展开
 
-1. 递归
+## 1. 递归
 
 ```js
 function flat1 (arr) {
@@ -18,7 +18,7 @@ function flat1 (arr) {
 
 
 
-2. toString
+## 2. toString
 
 ``` js
 function flat2 (arr) {
@@ -29,7 +29,7 @@ function flat2 (arr) {
 
 
 
-3. reduce
+## 3. reduce
 
 ```js
 function flat3 (arr) {
@@ -42,7 +42,7 @@ function flat3 (arr) {
 
 
 
-4. rest运算符
+## 4. ... 运算符
 
 ```js
 function flat4 (arr) {
@@ -57,7 +57,7 @@ function flat4 (arr) {
 
 
 
-5. ES6 flat
+## 5. ES6 flat
 
 ```js
 function flat5 (arr: any[]) {
@@ -65,4 +65,5 @@ function flat5 (arr: any[]) {
     return arr.flat(Infinity)
 }
 ```
+
 

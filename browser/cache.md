@@ -1,7 +1,5 @@
 # 缓存
 
-<!-- toc -->
-
 ```mermaid
 graph TB
 A[请求资源] -->B{Service Worker?}

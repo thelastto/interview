@@ -1,7 +1,5 @@
 # 计算机网络
 
-<!-- toc -->
-
 ## TCP 三次握手
 
 第一次握手：起初两端都处于CLOSED关闭状态，Client将标志位SYN置为1，随机产生一个值seq=x，并将该数据包发送给Server，Client进入SYN-SENT状态，等待Server确认；

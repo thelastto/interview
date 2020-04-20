@@ -1,7 +1,5 @@
 # 数据类型
 
-<!-- toc -->
-
 ## 基本数据类型
 
 Undefined、Null、Boolean、Number 、String、Symbol
