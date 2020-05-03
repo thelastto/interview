@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · 面试集</title>
+        <title>CSS · 面试集</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,8 +73,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="js-basic/" />
+    <link rel="next" href="http/" />
     
+    
+    <link rel="prev" href="js-skill/sleep.html" />
     
 
     </head>
@@ -103,7 +105,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -634,7 +636,7 @@
             
         </li>
     
-        <li class="chapter " data-level="2.4" data-path="css.html">
+        <li class="chapter active" data-level="2.4" data-path="css.html">
             
                 <a href="css.html">
             
@@ -1080,7 +1082,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >CSS</a>
     </h1>
 </div>
 
@@ -1095,18 +1097,25 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
-<p>&#x4E66;&#x7C4D;&#xFF1A;&#x9762;&#x8BD5;&#x96C6;</p>
-<p>&#x4F5C;&#x8005;&#xFF1A;&#x5F90;&#x6F02;&#x6F02;</p>
-<p>&#x7B80;&#x4ECB;&#xFF1A;&#x5230;&#x5904;&#x641C;&#x7F57;&#x6765;&#x7684;&#x9762;&#x8BD5;&#x9898;&#x76EE; T^T</p>
-<p>email&#xFF1A;xxxxujh@gmail.com</p>
-<p>&#xFF08;&#x8D34;&#x4E00;&#x4E9B;&#x8FD8;&#x8BB0;&#x5F97;&#x7684;&#x6765;&#x6E90;&#xFF0C;&#x6709;&#x4E9B;&#x5F53;&#x521D;&#x5FD8;&#x8BB0;&#x8BB0;&#x5F55;&#x4E86;&#xFF09;&#xFF1A;</p>
-<ul>
-<li><a href="https://github.com/Advanced-Frontend/Daily-Interview-Question" target="_blank">github-&#x58F9;&#x9898;</a></li>
-<li><a href="https://www.nowcoder.com/tutorial/96/f5212664ab664984882b00635066ded2" target="_blank">&#x725B;&#x5BA2;&#x7F51;-&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x5B9D;&#x5178;</a></li>
-</ul>
-<h2 id="2020419">2020.4.19</h2>
-<p>&#x4ECA;&#x5929;&#x7A81;&#x7136;&#x53D1;&#x73B0;&#x591A;&#x4E86;&#x597D;&#x591A; star&#xFF0C;&#x51B3;&#x5B9A;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x6BCF;&#x4E2A;&#x95EE;&#x9898;&#x90FD;&#x597D;&#x597D;&#x6269;&#x5C55;&#x4E00;&#x4E0B;&#xFF0C;&#x5199;&#x4E00;&#x4E9B;&#x81EA;&#x5DF1;&#x7684;&#x7406;&#x89E3;&#x3002;&#x51B2;&#x51B2;&#x51B2;&#xFF01;&#x1F9D0;</p>
+                                <h1 id="css">CSS</h1>
+<h2 id="&#x4E24;&#x5217;&#x7B49;&#x9AD8;&#x5E03;&#x5C40;">&#x4E24;&#x5217;&#x7B49;&#x9AD8;&#x5E03;&#x5C40;</h2>
+<ol>
+<li><p>padding &#x8865;&#x507F;&#xFF0C;&#x5B9E;&#x73B0;&#x201C;&#x770B;&#x4E0A;&#x53BB;&#x201D;&#x76F8;&#x7B49;</p>
+<pre><code class="lang-css">.parent {
+  overflow: hidden;
+}
+// &#x9884;&#x5148;&#x7ED9;&#x5B50;&#x5143;&#x7D20;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5F88;&#x5927;&#x7684; padding
+// &#x8FD9;&#x6837;&#x5176;&#x4E2D;&#x67D0;&#x4E2A;&#x5143;&#x7D20;&#x7684;&#x9AD8;&#x5EA6;&#x589E;&#x5927;&#x540E;&#xFF0C;&#x4F1A;&#x6491;&#x8D77; parent&#xFF0C;&#x800C;&#x53E6;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x7684; padding &#x5C31;&#x4F1A;&#x8865;&#x4E0A;&#x8FD9;&#x4E00;&#x5757;&#x9AD8;&#x5EA6;
+.left, .right {
+  padding: 9999px;
+  margin: -9999px;
+}
+</code></pre>
+</li>
+<li><p>flex</p>
+<p>&#x628A; parent &#x8BBE;&#x7F6E;&#x6210; flex &#x5E03;&#x5C40;&#x5C31;ok</p>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -1134,8 +1143,12 @@
 
             
                 
+                <a href="js-skill/sleep.html" class="navigation navigation-prev " aria-label="Previous page: sleep">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="js-basic/" class="navigation navigation-next navigation-unique" aria-label="Next page: JS 基础">
+                
+                <a href="http/" class="navigation navigation-next " aria-label="Next page: HTTP">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1146,7 +1159,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"JS 基础","level":"2.1","depth":1,"path":"js-basic/README.md","ref":"js-basic/README.md","articles":[{"title":"事件循环","level":"2.1.1","depth":2,"path":"js-basic/event_loop.md","ref":"js-basic/event_loop.md","articles":[]},{"title":"异步","level":"2.1.2","depth":2,"path":"js-basic/async/README.md","ref":"js-basic/async/README.md","articles":[{"title":"promise","level":"2.1.2.1","depth":3,"path":"js-basic/async/promise.md","ref":"js-basic/async/promise.md","articles":[]}]},{"title":"继承","level":"2.1.3","depth":2,"path":"js-basic/extends.md","ref":"js-basic/extends.md","articles":[]},{"title":"？bind","level":"2.1.4","depth":2,"path":"js-basic/bind.md","ref":"js-basic/bind.md","articles":[]},{"title":"this 指向","level":"2.1.5","depth":2,"path":"js-basic/this.md","ref":"js-basic/this.md","articles":[]},{"title":"数据类型","level":"2.1.6","depth":2,"path":"js-basic/type.md","ref":"js-basic/type.md","articles":[]},{"title":"如何解决异步回调地狱","level":"2.1.7","depth":2,"path":"js-basic/async.md","ref":"js-basic/async.md","articles":[]},{"title":"闭包有什么用","level":"2.1.8","depth":2,"path":"js-basic/closure.md","ref":"js-basic/closure.md","articles":[]},{"title":"？加载","level":"2.1.9","depth":2,"path":"js-basic/load.md","ref":"js-basic/load.md","articles":[]},{"title":"事件","level":"2.1.10","depth":2,"path":"js-basic/event.md","ref":"js-basic/event.md","articles":[]},{"title":"跨域","level":"2.1.11","depth":2,"path":"js-basic/cross_domain.md","ref":"js-basic/cross_domain.md","articles":[]},{"title":"ajax","level":"2.1.12","depth":2,"path":"js-basic/ajax.md","ref":"js-basic/ajax.md","articles":[]},{"title":"？BOM","level":"2.1.13","depth":2,"path":"js-basic/BOM.md","ref":"js-basic/BOM.md","articles":[]},{"title":"垃圾回收机制","level":"2.1.14","depth":2,"path":"js-basic/gc.md","ref":"js-basic/gc.md","articles":[]},{"title":"eval是做什么的","level":"2.1.15","depth":2,"path":"js-basic/eval.md","ref":"js-basic/eval.md","articles":[]},{"title":"监听对象属性的改变","level":"2.1.16","depth":2,"path":"js-basic/watch.md","ref":"js-basic/watch.md","articles":[]},{"title":"实现一个私有变量","level":"2.1.17","depth":2,"path":"js-basic/private_property.md","ref":"js-basic/private_property.md","articles":[]},{"title":"操作符","level":"2.1.18","depth":2,"path":"js-basic/operator.md","ref":"js-basic/operator.md","articles":[]},{"title":"js怎么控制一次加载一张图片，加载完后再加载下一张","level":"2.1.19","depth":2,"path":"js-basic/image.md","ref":"js-basic/image.md","articles":[]},{"title":"Function.proto === ?","level":"2.1.20","depth":2,"path":"js-basic/prototype.md","ref":"js-basic/prototype.md","articles":[]},{"title":"数组","level":"2.1.21","depth":2,"path":"js-basic/array/README.md","ref":"js-basic/array/README.md","articles":[{"title":"去重","level":"2.1.21.1","depth":3,"path":"js-basic/array/unique.md","ref":"js-basic/array/unique.md","articles":[]},{"title":"展开","level":"2.1.21.2","depth":3,"path":"js-basic/array/flat.md","ref":"js-basic/array/flat.md","articles":[]},{"title":"常用方法","level":"2.1.21.3","depth":3,"path":"js-basic/array/method.md","ref":"js-basic/array/method.md","articles":[]},{"title":"题目","level":"2.1.21.4","depth":3,"path":"js-basic/array/exercise.md","ref":"js-basic/array/exercise.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","mermaid-gb3","page-toc-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"page-toc-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gioia Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"面试集","gitbook":"*","description":"到处搜罗来的面试题目！"},"file":{"path":"README.md","mtime":"2020-04-19T16:11:26.842Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-03T16:08:27.835Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CSS","level":"2.4","depth":1,"next":{"title":"HTTP","level":"3.1","depth":1,"path":"http/README.md","ref":"http/README.md","articles":[{"title":"HTTP 头","level":"3.1.1","depth":2,"path":"http/header.md","ref":"http/header.md","articles":[]},{"title":"请求方法","level":"3.1.2","depth":2,"path":"http/method.md","ref":"http/method.md","articles":[]},{"title":"状态码","level":"3.1.3","depth":2,"path":"http/code.md","ref":"http/code.md","articles":[]},{"title":"HTTP2","level":"3.1.4","depth":2,"path":"http/http2.md","ref":"http/http2.md","articles":[]}]},"previous":{"title":"sleep","level":"2.3.6","depth":2,"path":"js-skill/sleep.md","ref":"js-skill/sleep.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","mermaid-gb3","page-toc-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"page-toc-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gioia Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"面试集","gitbook":"*","description":"到处搜罗来的面试题目！"},"file":{"path":"css.md","mtime":"2020-04-20T14:15:13.942Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-03T16:08:27.835Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

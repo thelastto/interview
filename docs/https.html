@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Introduction · 面试集</title>
+        <title>HTTPS · 面试集</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -73,8 +73,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="js-basic/" />
+    <link rel="next" href="cs/" />
     
+    
+    <link rel="prev" href="http/http2.html" />
     
 
     </head>
@@ -103,7 +105,7 @@
         
         
     
-        <li class="chapter active" data-level="1.1" data-path="./">
+        <li class="chapter " data-level="1.1" data-path="./">
             
                 <a href="./">
             
@@ -725,7 +727,7 @@
             
         </li>
     
-        <li class="chapter " data-level="3.2" data-path="https.html">
+        <li class="chapter active" data-level="3.2" data-path="https.html">
             
                 <a href="https.html">
             
@@ -1080,7 +1082,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Introduction</a>
+        <a href="." >HTTPS</a>
     </h1>
 </div>
 
@@ -1095,18 +1097,68 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
-<p>&#x4E66;&#x7C4D;&#xFF1A;&#x9762;&#x8BD5;&#x96C6;</p>
-<p>&#x4F5C;&#x8005;&#xFF1A;&#x5F90;&#x6F02;&#x6F02;</p>
-<p>&#x7B80;&#x4ECB;&#xFF1A;&#x5230;&#x5904;&#x641C;&#x7F57;&#x6765;&#x7684;&#x9762;&#x8BD5;&#x9898;&#x76EE; T^T</p>
-<p>email&#xFF1A;xxxxujh@gmail.com</p>
-<p>&#xFF08;&#x8D34;&#x4E00;&#x4E9B;&#x8FD8;&#x8BB0;&#x5F97;&#x7684;&#x6765;&#x6E90;&#xFF0C;&#x6709;&#x4E9B;&#x5F53;&#x521D;&#x5FD8;&#x8BB0;&#x8BB0;&#x5F55;&#x4E86;&#xFF09;&#xFF1A;</p>
-<ul>
-<li><a href="https://github.com/Advanced-Frontend/Daily-Interview-Question" target="_blank">github-&#x58F9;&#x9898;</a></li>
-<li><a href="https://www.nowcoder.com/tutorial/96/f5212664ab664984882b00635066ded2" target="_blank">&#x725B;&#x5BA2;&#x7F51;-&#x524D;&#x7AEF;&#x9762;&#x8BD5;&#x5B9D;&#x5178;</a></li>
-</ul>
-<h2 id="2020419">2020.4.19</h2>
-<p>&#x4ECA;&#x5929;&#x7A81;&#x7136;&#x53D1;&#x73B0;&#x591A;&#x4E86;&#x597D;&#x591A; star&#xFF0C;&#x51B3;&#x5B9A;&#x63A5;&#x4E0B;&#x6765;&#x7684;&#x6BCF;&#x4E2A;&#x95EE;&#x9898;&#x90FD;&#x597D;&#x597D;&#x6269;&#x5C55;&#x4E00;&#x4E0B;&#xFF0C;&#x5199;&#x4E00;&#x4E9B;&#x81EA;&#x5DF1;&#x7684;&#x7406;&#x89E3;&#x3002;&#x51B2;&#x51B2;&#x51B2;&#xFF01;&#x1F9D0;</p>
+                                <h1 id="https">HTTPS</h1>
+<h2 id="https&#x56DB;&#x6B21;&#x63E1;&#x624B;">HTTPS&#x56DB;&#x6B21;&#x63E1;&#x624B;</h2>
+<p>&#x6574;&#x4E2A;&#x8FC7;&#x7A0B;&#x662F;&#x660E;&#x6587;&#x7684;</p>
+<p><img src="https://tva1.sinaimg.cn/large/00831rSTly1gcdn16pgkbj30g40erwem.jpg" alt="HTTPS&#x56DB;&#x6B21;&#x63E1;&#x624B;"></p>
+<ol>
+<li><p>&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x51FA;&#x8BF7;&#x6C42;&#xFF1A;ClientHello</p>
+<blockquote>
+<p>&#x652F;&#x6301;&#x7684;&#x534F;&#x8BAE;&#x7248;&#x672C;&#xFF0C;&#x6BD4;&#x5982;TLS 1.0&#x7248;&#x3002;
+&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF;&#x751F;&#x6210;&#x7684;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x7A0D;&#x540E;&#x7528;&#x4E8E;&#x751F;&#x6210;&quot;&#x5BF9;&#x8BDD;&#x5BC6;&#x94A5;&quot;&#x3002;
+&#x652F;&#x6301;&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982;RSA&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x3002;
+&#x652F;&#x6301;&#x7684;&#x538B;&#x7F29;&#x65B9;&#x6CD5;&#x3002;</p>
+</blockquote>
+</li>
+<li><p>&#x670D;&#x52A1;&#x5668;&#x56DE;&#x5E94;&#xFF1A;ServerHello</p>
+<blockquote>
+<p> &#x786E;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x52A0;&#x5BC6;&#x901A;&#x4FE1;&#x534F;&#x8BAE;&#x7248;&#x672C;&#xFF0C;&#x6BD4;&#x5982;TLS 1.0&#x7248;&#x672C;&#x3002;&#x5982;&#x679C;&#x6D4F;&#x89C8;&#x5668;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x652F;&#x6301;&#x7684;&#x7248;&#x672C;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;&#x670D;&#x52A1;&#x5668;&#x5173;&#x95ED;&#x52A0;&#x5BC6;&#x901A;&#x4FE1;&#x3002;
+ &#x4E00;&#x4E2A;&#x670D;&#x52A1;&#x5668;&#x751F;&#x6210;&#x7684;&#x968F;&#x673A;&#x6570;&#xFF0C;&#x7A0D;&#x540E;&#x7528;&#x4E8E;&#x751F;&#x6210;&quot;&#x5BF9;&#x8BDD;&#x5BC6;&#x94A5;&quot;&#x3002;
+ &#x786E;&#x8BA4;&#x4F7F;&#x7528;&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#xFF0C;&#x6BD4;&#x5982;RSA&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#x3002;
+ &#x670D;&#x52A1;&#x5668;&#x8BC1;&#x4E66;&#x3002;</p>
+</blockquote>
+<p>&#x9664;&#x4E86;&#x4E0A;&#x9762;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#xFF0C;&#x5982;&#x679C;&#x670D;&#x52A1;&#x5668;&#x9700;&#x8981;&#x786E;&#x8BA4;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x8EAB;&#x4EFD;&#xFF0C;&#x5C31;&#x4F1A;&#x518D;&#x5305;&#x542B;&#x4E00;&#x9879;&#x8BF7;&#x6C42;&#xFF0C;&#x8981;&#x6C42;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4F9B;&quot;&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;&quot;&#x3002;&#x6BD4;&#x5982;&#xFF0C;&#x91D1;&#x878D;&#x673A;&#x6784;&#x5F80;&#x5F80;&#x53EA;&#x5141;&#x8BB8;&#x8BA4;&#x8BC1;&#x5BA2;&#x6237;&#x8FDE;&#x5165;&#x81EA;&#x5DF1;&#x7684;&#x7F51;&#x7EDC;&#xFF0C;&#x5C31;&#x4F1A;&#x5411;&#x6B63;&#x5F0F;&#x5BA2;&#x6237;&#x63D0;&#x4F9B;USB&#x5BC6;&#x94A5;&#xFF0C;&#x91CC;&#x9762;&#x5C31;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x5F20;&#x5BA2;&#x6237;&#x7AEF;&#x8BC1;&#x4E66;&#x3002;</p>
+</li>
+<li><p>&#x5BA2;&#x6237;&#x7AEF;&#x56DE;&#x5E94;</p>
+<ol>
+<li><p>&#x9A8C;&#x8BC1;&#x8BC1;&#x4E66;</p>
+</li>
+<li><p>&#x53D6;&#x51FA;&#x670D;&#x52A1;&#x5668;&#x516C;&#x94A5;</p>
+</li>
+<li><p>&#x53D1;&#x9001;&#x4FE1;&#x606F;</p>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x968F;&#x673A;&#x6570;&#x3002;&#x8BE5;&#x968F;&#x673A;&#x6570;&#x7528;&#x670D;&#x52A1;&#x5668;&#x516C;&#x94A5;&#x52A0;&#x5BC6;&#xFF0C;&#x9632;&#x6B62;&#x88AB;&#x7A83;&#x542C;&#x3002;</p>
+<p>&#x7F16;&#x7801;&#x6539;&#x53D8;&#x901A;&#x77E5;&#xFF0C;&#x8868;&#x793A;&#x968F;&#x540E;&#x7684;&#x4FE1;&#x606F;&#x90FD;&#x5C06;&#x7528;&#x53CC;&#x65B9;&#x5546;&#x5B9A;&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#x548C;&#x5BC6;&#x94A5;&#x53D1;&#x9001;&#x3002;</p>
+<p>&#x5BA2;&#x6237;&#x7AEF;&#x63E1;&#x624B;&#x7ED3;&#x675F;&#x901A;&#x77E5;&#xFF0C;&#x8868;&#x793A;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x63E1;&#x624B;&#x9636;&#x6BB5;&#x5DF2;&#x7ECF;&#x7ED3;&#x675F;&#x3002;&#x8FD9;&#x4E00;&#x9879;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x524D;&#x9762;&#x53D1;&#x9001;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x7684;hash&#x503C;&#xFF0C;&#x7528;&#x6765;&#x4F9B;&#x670D;&#x52A1;&#x5668;&#x6821;&#x9A8C;&#x3002;</p>
+</blockquote>
+<p>&#x81F3;&#x6B64;&#x4E3A;&#x6B62;&#xFF0C;&#x5171;&#x6709;3&#x4E2A;&#x968F;&#x673A;&#x6570;&#xFF1B;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x548C;&#x5BA2;&#x6237;&#x7AEF;&#x4F1A;&#x5404;&#x81EA;&#x7528;&#x8FD9;3&#x4E2A;&#x968F;&#x673A;&#x6570;&#x4EE5;&#x53CA;&#x5728;&#x7B2C;2&#x6B65;&#x4E2D;&#x786E;&#x5B9A;&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#xFF0C;&#x751F;&#x6210;&#x540C;&#x4E00;&#x628A;&#x201C;&#x4F1A;&#x8BDD;&#x5BC6;&#x94A5;&#x201D;</p>
+</li>
+</ol>
+</li>
+<li><p>&#x670D;&#x52A1;&#x5668;&#x7684;&#x6700;&#x540E;&#x56DE;&#x5E94;</p>
+<blockquote>
+<p>&#x7F16;&#x7801;&#x6539;&#x53D8;&#x901A;&#x77E5;&#xFF0C;&#x8868;&#x793A;&#x968F;&#x540E;&#x7684;&#x4FE1;&#x606F;&#x90FD;&#x5C06;&#x7528;&#x53CC;&#x65B9;&#x5546;&#x5B9A;&#x7684;&#x52A0;&#x5BC6;&#x65B9;&#x6CD5;&#x548C;&#x5BC6;&#x94A5;&#x53D1;&#x9001;&#x3002;</p>
+<p>&#x670D;&#x52A1;&#x5668;&#x63E1;&#x624B;&#x7ED3;&#x675F;&#x901A;&#x77E5;&#xFF0C;&#x8868;&#x793A;&#x670D;&#x52A1;&#x5668;&#x7684;&#x63E1;&#x624B;&#x9636;&#x6BB5;&#x5DF2;&#x7ECF;&#x7ED3;&#x675F;&#x3002;&#x8FD9;&#x4E00;&#x9879;&#x540C;&#x65F6;&#x4E5F;&#x662F;&#x524D;&#x9762;&#x53D1;&#x9001;&#x7684;&#x6240;&#x6709;&#x5185;&#x5BB9;&#x7684;hash&#x503C;&#xFF0C;&#x7528;&#x6765;&#x4F9B;&#x5BA2;&#x6237;&#x7AEF;&#x6821;&#x9A8C;&#x3002;</p>
+</blockquote>
+<p>&#x81F3;&#x6B64;&#xFF0C;&#x6574;&#x4E2A;&#x63E1;&#x624B;&#x9636;&#x6BB5;&#x5168;&#x90E8;&#x7ED3;&#x675F;&#x3002;&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x4E0E;&#x670D;&#x52A1;&#x5668;&#x8FDB;&#x5165;&#x52A0;&#x5BC6;&#x901A;&#x4FE1;&#xFF0C;&#x5C31;&#x5B8C;&#x5168;&#x662F;&#x4F7F;&#x7528;&#x666E;&#x901A;&#x7684;HTTP&#x534F;&#x8BAE;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x7528;&quot;&#x4F1A;&#x8BDD;&#x5BC6;&#x94A5;&quot;&#x52A0;&#x5BC6;&#x5185;&#x5BB9;&#x3002;</p>
+</li>
+</ol>
+<h2 id="https-&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;">HTTPS &#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;</h2>
+<p>&#x4E2D;&#x95F4;&#x4EBA;&#x653B;&#x51FB;&#x8FC7;&#x7A0B;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ol>
+<li>&#x670D;&#x52A1;&#x5668;&#x5411;&#x5BA2;&#x6237;&#x7AEF;&#x53D1;&#x9001;&#x516C;&#x94A5;&#x3002;</li>
+<li>&#x653B;&#x51FB;&#x8005;&#x622A;&#x83B7;&#x516C;&#x94A5;&#xFF0C;&#x4FDD;&#x7559;&#x5728;&#x81EA;&#x5DF1;&#x624B;&#x4E0A;&#x3002;</li>
+<li>&#x7136;&#x540E;&#x653B;&#x51FB;&#x8005;&#x81EA;&#x5DF1;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x3010;&#x4F2A;&#x9020;&#x7684;&#x3011;&#x516C;&#x94A5;&#xFF0C;&#x53D1;&#x7ED9;&#x5BA2;&#x6237;&#x7AEF;&#x3002;</li>
+<li>&#x5BA2;&#x6237;&#x7AEF;&#x6536;&#x5230;&#x4F2A;&#x9020;&#x7684;&#x516C;&#x94A5;&#x540E;&#xFF0C;&#x751F;&#x6210;&#x52A0;&#x5BC6;hash&#x503C;&#x53D1;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x3002;</li>
+<li>&#x653B;&#x51FB;&#x8005;&#x83B7;&#x5F97;&#x52A0;&#x5BC6;hash&#x503C;&#xFF0C;&#x7528;&#x81EA;&#x5DF1;&#x7684;&#x79C1;&#x94A5;&#x89E3;&#x5BC6;&#x83B7;&#x5F97;&#x771F;&#x79D8;&#x94A5;&#x3002;</li>
+<li>&#x540C;&#x65F6;&#x751F;&#x6210;&#x5047;&#x7684;&#x52A0;&#x5BC6;hash&#x503C;&#xFF0C;&#x53D1;&#x7ED9;&#x670D;&#x52A1;&#x5668;&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x7528;&#x79C1;&#x94A5;&#x89E3;&#x5BC6;&#x83B7;&#x5F97;&#x5047;&#x79D8;&#x94A5;&#x3002;</li>
+<li>&#x670D;&#x52A1;&#x5668;&#x7528;&#x52A0;&#x79D8;&#x94A5;&#x52A0;&#x5BC6;&#x4F20;&#x8F93;&#x4FE1;&#x606F;</li>
+</ol>
+<p>&#x9632;&#x8303;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ol>
+<li>&#x670D;&#x52A1;&#x7AEF;&#x5728;&#x53D1;&#x9001;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x516C;&#x94A5;&#x4E2D;&#x52A0;&#x5165;CA&#x8BC1;&#x4E66;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x53EF;&#x4EE5;&#x9A8C;&#x8BC1;CA&#x8BC1;&#x4E66;&#x7684;&#x6709;&#x6548;&#x6027;</li>
+</ol>
 
                                 
                                 </section>
@@ -1134,8 +1186,12 @@
 
             
                 
+                <a href="http/http2.html" class="navigation navigation-prev " aria-label="Previous page: HTTP2">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="js-basic/" class="navigation navigation-next navigation-unique" aria-label="Next page: JS 基础">
+                
+                <a href="cs/" class="navigation navigation-next " aria-label="Next page: 计算机网络">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1146,7 +1202,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Introduction","level":"1.1","depth":1,"next":{"title":"JS 基础","level":"2.1","depth":1,"path":"js-basic/README.md","ref":"js-basic/README.md","articles":[{"title":"事件循环","level":"2.1.1","depth":2,"path":"js-basic/event_loop.md","ref":"js-basic/event_loop.md","articles":[]},{"title":"异步","level":"2.1.2","depth":2,"path":"js-basic/async/README.md","ref":"js-basic/async/README.md","articles":[{"title":"promise","level":"2.1.2.1","depth":3,"path":"js-basic/async/promise.md","ref":"js-basic/async/promise.md","articles":[]}]},{"title":"继承","level":"2.1.3","depth":2,"path":"js-basic/extends.md","ref":"js-basic/extends.md","articles":[]},{"title":"？bind","level":"2.1.4","depth":2,"path":"js-basic/bind.md","ref":"js-basic/bind.md","articles":[]},{"title":"this 指向","level":"2.1.5","depth":2,"path":"js-basic/this.md","ref":"js-basic/this.md","articles":[]},{"title":"数据类型","level":"2.1.6","depth":2,"path":"js-basic/type.md","ref":"js-basic/type.md","articles":[]},{"title":"如何解决异步回调地狱","level":"2.1.7","depth":2,"path":"js-basic/async.md","ref":"js-basic/async.md","articles":[]},{"title":"闭包有什么用","level":"2.1.8","depth":2,"path":"js-basic/closure.md","ref":"js-basic/closure.md","articles":[]},{"title":"？加载","level":"2.1.9","depth":2,"path":"js-basic/load.md","ref":"js-basic/load.md","articles":[]},{"title":"事件","level":"2.1.10","depth":2,"path":"js-basic/event.md","ref":"js-basic/event.md","articles":[]},{"title":"跨域","level":"2.1.11","depth":2,"path":"js-basic/cross_domain.md","ref":"js-basic/cross_domain.md","articles":[]},{"title":"ajax","level":"2.1.12","depth":2,"path":"js-basic/ajax.md","ref":"js-basic/ajax.md","articles":[]},{"title":"？BOM","level":"2.1.13","depth":2,"path":"js-basic/BOM.md","ref":"js-basic/BOM.md","articles":[]},{"title":"垃圾回收机制","level":"2.1.14","depth":2,"path":"js-basic/gc.md","ref":"js-basic/gc.md","articles":[]},{"title":"eval是做什么的","level":"2.1.15","depth":2,"path":"js-basic/eval.md","ref":"js-basic/eval.md","articles":[]},{"title":"监听对象属性的改变","level":"2.1.16","depth":2,"path":"js-basic/watch.md","ref":"js-basic/watch.md","articles":[]},{"title":"实现一个私有变量","level":"2.1.17","depth":2,"path":"js-basic/private_property.md","ref":"js-basic/private_property.md","articles":[]},{"title":"操作符","level":"2.1.18","depth":2,"path":"js-basic/operator.md","ref":"js-basic/operator.md","articles":[]},{"title":"js怎么控制一次加载一张图片，加载完后再加载下一张","level":"2.1.19","depth":2,"path":"js-basic/image.md","ref":"js-basic/image.md","articles":[]},{"title":"Function.proto === ?","level":"2.1.20","depth":2,"path":"js-basic/prototype.md","ref":"js-basic/prototype.md","articles":[]},{"title":"数组","level":"2.1.21","depth":2,"path":"js-basic/array/README.md","ref":"js-basic/array/README.md","articles":[{"title":"去重","level":"2.1.21.1","depth":3,"path":"js-basic/array/unique.md","ref":"js-basic/array/unique.md","articles":[]},{"title":"展开","level":"2.1.21.2","depth":3,"path":"js-basic/array/flat.md","ref":"js-basic/array/flat.md","articles":[]},{"title":"常用方法","level":"2.1.21.3","depth":3,"path":"js-basic/array/method.md","ref":"js-basic/array/method.md","articles":[]},{"title":"题目","level":"2.1.21.4","depth":3,"path":"js-basic/array/exercise.md","ref":"js-basic/array/exercise.md","articles":[]}]}]},"dir":"ltr"},"config":{"plugins":["chapter-fold","mermaid-gb3","page-toc-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"page-toc-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gioia Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"面试集","gitbook":"*","description":"到处搜罗来的面试题目！"},"file":{"path":"README.md","mtime":"2020-04-19T16:11:26.842Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-03T16:08:27.835Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"HTTPS","level":"3.2","depth":1,"next":{"title":"计算机网络","level":"3.3","depth":1,"path":"cs/README.md","ref":"cs/README.md","articles":[{"title":"TCP","level":"3.3.1","depth":2,"path":"cs/tcp.md","ref":"cs/tcp.md","articles":[]},{"title":"网络模型","level":"3.3.2","depth":2,"path":"cs/model.md","ref":"cs/model.md","articles":[]},{"title":"从输入url到显示页面这个过程发生了什么","level":"3.3.3","depth":2,"path":"cs/what_happened.md","ref":"cs/what_happened.md","articles":[]},{"title":"cdn","level":"3.3.4","depth":2,"path":"cs/cdn.md","ref":"cs/cdn.md","articles":[]},{"title":"websocket","level":"3.3.5","depth":2,"path":"cs/websocket.md","ref":"cs/websocket.md","articles":[]}]},"previous":{"title":"HTTP2","level":"3.1.4","depth":2,"path":"http/http2.md","ref":"http/http2.md","articles":[]},"dir":"ltr"},"config":{"plugins":["chapter-fold","mermaid-gb3","page-toc-button","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"livereload":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"page-toc-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Gioia Xu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"面试集","gitbook":"*","description":"到处搜罗来的面试题目！"},"file":{"path":"https.md","mtime":"2020-04-27T07:58:46.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-03T16:08:27.835Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

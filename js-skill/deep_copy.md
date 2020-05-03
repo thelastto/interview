@@ -1,13 +1,15 @@
 # 深拷贝
 
-需要特殊判断的类型：对象、数组、Symbol、function
+可以看看[我的博客](https://thelastto.github.io/2020/05/01/deepcopy/#more)
 
-- 基本类型：不需要拷贝，直接返回
+总之思路就是判断是什么类型的。如果是引用类型就按以下三步走：
 
-- 数组或对象
+1. 初始化。即调用相应的构造函数
+2.  有循环引用的话需要处理一下
+3. 递归地赋值
 
-  ```js
-  JSON.parse(JSON.stringify(arr) )
-  ```
 
-- 
+
+以及基本类型是不需要拷贝的，直接返回就可以了。
+
+还有一个拷贝数组或对象的黑科技：`JSON.parse(JSON.stringify(arr) )`
